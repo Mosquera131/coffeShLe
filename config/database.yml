@@ -53,5 +53,6 @@ production:
   database: <%= ENV.fetch("DB_NAME") %>
   username: <%= ENV.fetch("DB_USERNAME") %>
   password: <%= ENV.fetch("DB_PASSWORD") %>
+  url: <%= ENV.fetch("DB_URL") %>
   
   # database: path/to/persistent/storage/production.sqlite3
