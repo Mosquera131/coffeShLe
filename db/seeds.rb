@@ -7,3 +7,13 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+[
+  {
+    name:  "Leison",
+    email: "leison@gmail.com"
+  }
+].each do |user|
+  User.find_or_create_by! user
+  puts "User seed run successfully"
+end
