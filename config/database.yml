@@ -48,11 +48,6 @@ production:
   database: coffeShLe_production
   # The `host`, `port` and `database` properties are required
   # for production as the default values differ from your local machine
-  host: <%= ENV.fetch("DB_HOST") %>
-  port: <%= ENV.fetch("DB_PORT") %>
-  database: <%= ENV.fetch("DB_NAME") %>
-  username: <%= ENV.fetch("DB_USERNAME") %>
-  password: <%= ENV.fetch("DB_PASSWORD") %>
   url: <%= ENV.fetch("DB_URL") %>
   
   # database: path/to/persistent/storage/production.sqlite3
