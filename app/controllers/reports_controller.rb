@@ -11,7 +11,7 @@ class ReportsController < ApplicationController
   # GET /reports/1
   def show
     @report = Report.find(params[:id])
-    render json: @report
+    render json: @report.as_json(include: { user: { only: [ :id, :name, :email ] } }, except: [ :updated_at ])
   end
 
   # POST /reports
