@@ -3,9 +3,9 @@ class ReportsController < ApplicationController
 
   # GET /reports
   def index
-    @reports = Report.all
+    @reports = Report.includes(:user).all
 
-    render json: @reports
+    render json: @reports.as_json(include: { user: { only: [ :id, :name, :email ] } })
   end
 
   # GET /reports/1
